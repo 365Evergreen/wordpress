@@ -1,34 +1,172 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
-	"settings": {
-		"appearanceTools": true,
-		"layout": {
-			"contentSize": "620px",
-			"wideSize": "1000px"
-		},
-		"spacing": {
-			"units": [ "%", "px", "em", "rem", "vh", "vw" ]
-		},
-		"typography": {
-			"fontFamilies": [
-				{
-					"fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
-					"name": "System Font",
-					"slug": "system-font"
-				}
-			]
-		},
-		"useRootPaddingAwareAlignments": true
-	},
-	"templateParts": [
-		{
-			"area": "header",
-			"name": "header"
-		},
-		{
-			"area": "footer",
-			"name": "footer"
-		}
-	],
-	"version": 3
+    "settings": {
+        "appearanceTools": true,
+        "layout": {
+            "contentSize": "620px",
+            "wideSize": "1000px"
+        },
+        "spacing": {
+            "units": [
+                "%",
+                "px",
+                "em",
+                "rem",
+                "vh",
+                "vw"
+            ]
+        },
+        "typography": {
+            "fontFamilies": [
+                {
+                    "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
+                    "name": "System Font",
+                    "slug": "system-font"
+                },
+                {
+                    "name": "Roboto",
+                    "slug": "roboto",
+                    "fontFamily": "Roboto, sans-serif",
+                    "fontFace": [
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-100-normal.woff2"
+                            ],
+                            "fontWeight": "100",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-300-normal.woff2"
+                            ],
+                            "fontWeight": "300",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-400-normal.woff2"
+                            ],
+                            "fontWeight": "400",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-500-normal.woff2"
+                            ],
+                            "fontWeight": "500",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-700-normal.woff2"
+                            ],
+                            "fontWeight": "700",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-900-normal.woff2"
+                            ],
+                            "fontWeight": "900",
+                            "fontStyle": "normal",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-100-italic.woff2"
+                            ],
+                            "fontWeight": "100",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-300-italic.woff2"
+                            ],
+                            "fontWeight": "300",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-400-italic.woff2"
+                            ],
+                            "fontWeight": "400",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-500-italic.woff2"
+                            ],
+                            "fontWeight": "500",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-700-italic.woff2"
+                            ],
+                            "fontWeight": "700",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        },
+                        {
+                            "src": [
+                                "file:./assets/fonts/roboto/roboto-900-italic.woff2"
+                            ],
+                            "fontWeight": "900",
+                            "fontStyle": "italic",
+                            "fontFamily": "Roboto"
+                        }
+                    ]
+                }
+            ]
+        },
+        "useRootPaddingAwareAlignments": true
+    },
+    "styles": {
+        "css": ".wp-container-2 {\n    position: fixed !important;\n    width: 100%;\n    top: 0 !important;\n    z-index: 9999 !important;\n    background-color: transparent !important;\n    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;\n}\n\n.wp-container-2.scrolled {\n    background-color: rgba(246, 246, 246, 0.95) !important;\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n\n/* Make the entire header container transparent */\n.wp-container-2 .sticky-header {\n    background-color: transparent !important;\n    transition: all 0.3s ease-in-out;\n    box-shadow: none;\n}\n\n.wp-container-2 .sticky-header.scrolled {\n    background-color: rgba(246, 246, 246, 0.95) !important;\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n\n/* Also apply the transition to the container itself */\n.wp-container-2.scrolled {\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n}\n\n/* Override WordPress background classes with higher specificity */\n.wp-container-2 .sticky-header.has-tertiary-background-color,\n.wp-container-2 .sticky-header.has-background,\n.wp-container-2 .sticky-header.has-tertiary-background-color.has-background {\n    background-color: transparent !important;\n}\n\n.wp-container-2 .sticky-header.scrolled.has-tertiary-background-color,\n.wp-container-2 .sticky-header.scrolled.has-background,\n.wp-container-2 .sticky-header.scrolled.has-tertiary-background-color.has-background {\n    background-color: rgba(246, 246, 246, 0.95) !important;\n}\n\nhtml, body {\n    height: 100%;\n    overflow-x: hidden; /* Prevent horizontal scroll */\n    overflow-y: auto; /* Ensure vertical scroll */\n    margin: 0;\n    padding: 0;\n}\n\n/* Ensure the page has enough content to scroll */\nbody {\n    min-height: 100vh;\n    padding-top: 80px; /* Add padding to account for fixed header */\n}\n\n/* Debug: Add a min-height to ensure scrolling is possible */\n.wp-site-blocks {\n    min-height: 200vh; /* This ensures there's content to scroll */\n}\n\n/* Make the entire header container transparent */\n.wp-container-2 .sticky-header {\n    background-color: transparent !important;\n    transition: all 0.3s ease-in-out;\n    box-shadow: none;\n}\n\n.wp-container-2 .sticky-header.scrolled {\n    background-color: rgba(246, 246, 246, 0.95) !important;\n    backdrop-filter: blur(10px);\n    -webkit-backdrop-filter: blur(10px);\n    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);\n    border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n}\n\n/* Also apply the transition to the container itself */\n.wp-container-2.scrolled {\n    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);\n}\n\n/* Override WordPress background classes with higher specificity */\n.wp-container-2 .sticky-header.has-tertiary-background-color,\n.wp-container-2 .sticky-header.has-background,\n.wp-container-2 .sticky-header.has-tertiary-background-color.has-background {\n    background-color: transparent !important;\n}\n\n.wp-container-2 .sticky-header.scrolled.has-tertiary-background-color,\n.wp-container-2 .sticky-header.scrolled.has-background,\n.wp-container-2 .sticky-header.scrolled.has-tertiary-background-color.has-background {\n    background-color: rgba(246, 246, 246, 0.95) !important;\n}\n\nhtml, body {\n    height: 100%;\n    overflow-x: hidden; /* Prevent horizontal scroll */\n    overflow-y: auto; /* Ensure vertical scroll */\n    margin: 0;\n    padding: 0;\n}\n\n/* Ensure the page has enough content to scroll */\nbody {\n    min-height: 100vh;\n}\n\n/* Remove the old hero-section margin since we're using sticky positioning */\n\n/* Debug: Add a min-height to ensure scrolling is possible */\n.wp-site-blocks {\n    min-height: 200vh; /* This ensures there's content to scroll */\n}\n\n/* Microsoft 365 Card Hover Effects */\n.microsoft-365-card {\n    transition: all 0.3s ease-in-out;\n    cursor: pointer;\n    border-radius: 8px;\n    padding: 20px;\n    border: 1px solid #e0e0e0;\n    background-color: #ffffff;\n}\n\n/* Also target WordPress blocks that might contain the card */\n.wp-block-group.microsoft-365-card,\n.wp-block-column.microsoft-365-card,\n.wp-block-stack.microsoft-365-card {\n    transition: all 0.3s ease-in-out;\n    cursor: pointer;\n    border-radius: 8px;\n    padding: 20px !important;\n    border: 1px solid #e0e0e0;\n    background-color: #ffffff;\n}\n\n.microsoft-365-card:hover,\n.wp-block-group.microsoft-365-card:hover,\n.wp-block-column.microsoft-365-card:hover,\n.wp-block-stack.microsoft-365-card:hover {\n    transform: translateY(-5px);\n    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);\n    background-color: #f8f9fa;\n    border-color: #0078d4;\n}\n\n.microsoft-365-card:hover h1,\n.microsoft-365-card:hover h2,\n.microsoft-365-card:hover h3,\n.microsoft-365-card:hover h4,\n.microsoft-365-card:hover .wp-block-heading {\n    color: #0078d4 !important; /* Microsoft blue */\n}\n\n.microsoft-365-card:hover ul li,\n.microsoft-365-card:hover .wp-block-list li {\n    transform: translateX(5px);\n    transition: transform 0.2s ease-in-out;\n}",
+        "elements": {
+            "button": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--roboto)"
+                }
+            },
+            "caption": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--roboto)"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--roboto)"
+                }
+            },
+            "link": {
+                "typography": {
+                    "fontFamily": "var(--wp--preset--font-family--roboto)"
+                }
+            }
+        },
+        "typography": {
+            "fontFamily": "var(--wp--preset--font-family--roboto)"
+        }
+    },
+    "templateParts": [
+        {
+            "area": "header",
+            "name": "header"
+        },
+        {
+            "area": "footer",
+            "name": "footer"
+        }
+    ],
+    "version": 3,
+    "$schema": "https://schemas.wp.org/wp/6.8/theme.json"
 }
